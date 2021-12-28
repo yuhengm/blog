@@ -1,0 +1,38 @@
+<%- include("partials/header") -%>
+<h1>Compose</h1>
+<form action="/compose" method="post">
+  <div>
+    <div class="form-group">
+      <label for="post-title">Title</label>
+      <input
+        type="text"
+        name="postTitle"
+        id
+        data-="post-title"
+        class="form-control"
+        placeholder="Enter your title here"
+        autocomplete="off"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="post-body">Content</label>
+      <textarea
+        name="postBody"
+        class="form-control"
+        id="post-body"
+        placeholder="Enter your blog contents here"
+        cols="30"
+        rows="10"
+      ></textarea>
+    </div>
+
+    <div>
+      <button type="submit" name="publishBtn" class="btn btn-outline-dark">
+        Publish
+      </button>
+    </div>
+  </div>
+</form>
+
+<%- include("partials/footer") -%>
