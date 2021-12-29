@@ -11,10 +11,10 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-// mongoDB local host setup
-mongoose.connect("mongodb://127.0.0.1:27017/blogDB", {
-  useNewUrlParser: true,
-});
+// hide mongoDB user info
+const uri = process.env.MONGODB_URI;
+mongoose.connect(uri);
+
 const postSchema = {
   title: String,
   content: String
