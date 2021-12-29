@@ -2,11 +2,31 @@
 
 <h1>Home</h1>
 <p class="greeting">Hello, my dear! What's in your mind today?</p>
+<form action="/compose" method="get">
+    <button 
+        type="submit" 
+        name="publishBtn" 
+        class="btn btn-outline-dark">
+    Compose
+    </button>
+</form>
 
 <% for (var post of posts) { %>
-<h3><%=post.title %></h3>
+
+    <div class="post-title">
+    <h3><%=post.title %></h3>
+    <form action="/delete" method="post">
+        <button 
+            type="submit" 
+            class="btn btn-outline-dark btn-xs delete-btn">
+        Delete
+        </button>
+        <input type="hidden" name="postID" value=<%= post._id %>></input>
+    </form>
+    </div>
+
 <p>
     <%=post.content.substring(0, 100) + "..." %>
-    <a href="/posts/<%=post.title %>">Read more</a>
+    <a href="/posts/<%=post._id %>">Read more</a>
 </p>
 <% } %> <%- include("partials/footer") -%>

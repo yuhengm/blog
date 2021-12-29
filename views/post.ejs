@@ -1,7 +1,18 @@
 <%- include("partials/header") -%>
+
 <h1> <%=title %> </h1>
 <p class="greeting">
   <%=content %> 
 </p>
+
+
+
+<form action="/" method="get">
+    <button 
+        type="submit" 
+        class="btn btn-outline-dark">
+    Return
+    </button>
+</form>
 
 <%- include("partials/footer") -%>

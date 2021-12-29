@@ -57,14 +57,21 @@ h1 {
   color: #fff;
 }
 
-/* Home page */
-
-.date {
-  color: #cdbba7;
-}
-
 /* Compose page */
 
 .btn {
   background-color: #cdbba7;
+}
+
+.post-title{
+  display: flex;
+  align-items: center;
+}
+
+.delete-btn {
+  margin-left: 3rem;
+  margin-top: 15px;
+  border: 1px solid #cdbba7;
+  background-color: transparent;
+  color: #cdbba7;
 }
