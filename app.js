@@ -1,10 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const date = require(__dirname + "/date.js");
 const _ = require("lodash");
 
-const posts = [];
 const app = express();
 
 app.set("view engine", "ejs");
@@ -12,12 +10,13 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+const posts = [];
+
 /* Set up routes */
 
 app.get("/", function (req, res) {
   res.render("home", {
-    posts: posts,
-    date: date.getDate(),
+    posts: posts
   });
 });
 
@@ -62,6 +61,7 @@ app.post("/compose", function (req, res) {
 
 /* Set up server */
 
-app.listen(3000, function () {
-  console.log("Server started on port 3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Our app is running on port ${PORT}`);
 });

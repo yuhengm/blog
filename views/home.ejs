@@ -1,11 +1,10 @@
 <%- include("partials/header") -%>
 
 <h1>Home</h1>
-<p class="greeting">Hello dear! What's in your mind today?</p>
+<p class="greeting">Hello, my dear! What's in your mind today?</p>
 
 <% for (var post of posts) { %>
 <h3><%=post.title %></h3>
-<!-- <p class="date"><%=date %></p> -->
 <p>
     <%=post.content.substring(0, 100) + "..." %>
     <a href="/posts/<%=post.title %>">Read more</a>
