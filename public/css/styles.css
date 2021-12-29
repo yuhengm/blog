@@ -63,6 +63,8 @@ h1 {
   background-color: #cdbba7;
 }
 
+/* Posts on Home page */
+
 .post-title{
   display: flex;
   align-items: center;
@@ -74,4 +76,21 @@ h1 {
   border: 1px solid #cdbba7;
   background-color: transparent;
   color: #cdbba7;
+}
+
+/* About Page */
+
+.about-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+hr {
+  max-width: 500px;
+  border: 0;
+  height: 1px;
+  background: transparent;
+  background-image: linear-gradient(to right, white, grey, white);
 }
