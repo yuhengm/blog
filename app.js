@@ -15,6 +15,10 @@ app.use(express.static("public"));
 const uri = process.env.MONGODB_URI;
 mongoose.connect(uri);
 
+// localhost
+// localhost mongoDB
+// mongoose.connect("mongodb://127.0.0.1:27017/blogDB", {useNewUrlParser: true});
+
 const postSchema = {
   title: String,
   content: String
